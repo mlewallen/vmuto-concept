@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="A privately owned 24/7 training gym in Lewiston, New York, with private coaching in person and by video.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Liberty">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<title>Liberty Fitness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link id="brand-fonts" rel="stylesheet" href="">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l8-8M16 7l3 3M14 9l2 2"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-dumbbell" viewBox="0 0 24 24"><path d="M6 8v8M3.5 10v4M18 8v8M20.5 10v4M6 12h12"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 15h4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-brush" viewBox="0 0 24 24"><path d="M14 4l6 6-8.5 8.5a3 3 0 01-4.2 0l-1.8-1.8a3 3 0 010-4.2z"/><path d="M4 20c0-2 1-3 3-3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0114 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2.5"/><path d="M16 10.5l5-3v9l-5-3"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10-6.5z"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.2" r=".6" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============================ PUBLIC SITE ============================ -->
+<div id="site" class="view">
+  <div class="ticker" id="ticker">
+    <div class="ticker-viewport" aria-hidden="true"><div class="ticker-track" id="ticker-track"></div></div>
+    <button class="ticker-btn" id="ticker-btn" type="button" aria-label="Pause scrolling text" aria-pressed="false">
+      <svg class="ic"><use href="#i-pause"/></svg>
+    </button>
+  </div>
+
+  <header class="nav" id="nav">
+    <a class="wordmark" href="#home" data-brand="name"></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#gym">The gym</a>
+      <a href="#training">Training</a>
+      <a href="#memberships">Memberships</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn brand-open" type="button" aria-label="Brand controls" data-brand-toggle>
+        <svg class="ic"><use href="#i-brush"/></svg>
+      </button>
+      <a class="text-link hide-sm" href="#app">Member app</a>
+      <a class="btn btn-solid btn-sm hide-xs" href="#join">Join</a>
+      <button class="icon-btn menu-btn" type="button" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <svg class="ic"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu sheet -->
+  <div class="menu" id="menu" hidden>
+    <nav aria-label="Menu">
+      <a href="#gym"><span>The gym</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a href="#how"><span>How it works</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a href="#training"><span>Training</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a href="#memberships"><span>Memberships</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a href="#faq"><span>FAQ</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a href="#visit"><span>Visit</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+    </nav>
+    <div class="menu-foot">
+      <a class="btn btn-solid btn-block" href="#join">Join the founding list</a>
+      <a class="btn btn-ghost btn-block" href="#app">Open the member app</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero inv" id="home" aria-labelledby="hero-h">
+      <span class="slot-label">Photography — hero, full bleed</span>
+      <div class="hero-copy">
+        <p class="eyebrow hero-eyebrow"><span class="dot" aria-hidden="true"></span><span data-brand="location"></span> · <span data-brand="status"></span></p>
+        <h1 id="hero-h" data-brand="tagline"></h1>
+        <p class="lede" data-brand="subline"></p>
+        <div class="cta-row">
+          <a class="btn btn-solid" href="#join" data-interest="membership">Join the founding list</a>
+          <a class="btn btn-ghost" href="#training"><span>Train with <span data-brand="coachFirst"></span></span></a>
+        </div>
+      </div>
+      <dl class="hero-facts">
+        <div><dt>Access</dt><dd>24 / 7</dd></div>
+        <div><dt>Coaching</dt><dd>In person + remote</dd></div>
+        <div><dt>Ownership</dt><dd>Private, owner-run</dd></div>
+      </dl>
+    </section>
+
+    <!-- Two paths -->
+    <section class="paths" aria-label="Two ways in">
+      <a class="path inv" href="#memberships">
+        <span class="num">01</span>
+        <h2>Join the gym</h2>
+        <p>Your key is your phone. Five in the morning or eleven at night, the floor is yours.</p>
+        <span class="path-cta">See memberships <svg class="ic"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="path inv alt" href="#training">
+        <span class="num">02</span>
+        <h2>Train with <span data-brand="coachFirst"></span></h2>
+        <p>Private sessions in Lewiston, or by video from wherever you are. A program built for one person.</p>
+        <span class="path-cta">See training <svg class="ic"><use href="#i-arrow"/></svg></span>
+      </a>
+    </section>
+
+    <!-- The gym -->
+    <section class="band" id="gym" aria-labelledby="gym-h">
+      <div class="band-head">
+        <span class="num">03 — The gym</span>
+        <h2 id="gym-h">Built to be used. At any hour.</h2>
+      </div>
+      <div class="two-col">
+        <div class="stack">
+          <p class="big">For people who take their training seriously.</p>
+          <p class="body-muted">The space is in build-out now. Members enter with the app, and the door knows who you are and what your membership includes.</p>
+          <h3 class="mini-h">On the floor</h3>
+          <ul class="chips" id="equipment"></ul>
+        </div>
+        <div class="photo-slot" role="img" aria-label="Photography placeholder: the gym floor at night">
+          <span>Photography — the floor, after hours</span>
+        </div>
+      </div>
+      <ul class="feature-list" id="gym-features"></ul>
+    </section>
+
+    <!-- How it works -->
+    <section class="band band-surface" id="how" aria-labelledby="how-h">
+      <div class="band-head">
+        <span class="num">04 — How 24/7 works</span>
+        <h2 id="how-h">Three steps to the floor.</h2>
+      </div>
+      <ol class="steps" id="how-steps"></ol>
+    </section>
+
+    <!-- Training -->
+    <section class="band" id="training" aria-labelledby="training-h">
+      <div class="band-head">
+        <span class="num">05 — Training</span>
+        <h2 id="training-h" data-brand="coachLine"></h2>
+      </div>
+      <div class="two-col">
+        <div class="photo-slot tall" role="img" aria-label="Photography placeholder: a coaching session">
+          <span>Photography — a session in progress</span>
+        </div>
+        <div class="stack">
+          <p class="pill" data-brand="coachProof"></p>
+          <p class="big"><span data-brand="coachName"></span> coaches every session himself.</p>
+          <div id="coach-bio" class="stack-sm body-muted"></div>
+          <ul class="creds" id="coach-creds"></ul>
+          <div class="split">
+            <div>
+              <h3 class="mini-h"><svg class="ic"><use href="#i-pin"/></svg> In person</h3>
+              <p class="body-muted">Private sessions at the gym in <span data-brand="location"></span>. Book a slot in the app, and the door opens for your appointment.</p>
+            </div>
+            <div>
+              <h3 class="mini-h"><svg class="ic"><use href="#i-video"/></svg> Remote</h3>
+              <p class="body-muted">The same coaching by video. For clients who train elsewhere, travel, or started with him downstate.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3 class="sub-h">How coaching works</h3>
+      <ol class="steps steps-line" id="coach-steps"></ol>
+      <div class="center-cta"><a class="btn btn-solid" href="#join" data-interest="training">Request a consult</a></div>
+    </section>
+
+    <!-- Memberships -->
+    <section class="band band-surface" id="memberships" aria-labelledby="mem-h">
+      <div class="band-head">
+        <span class="num">06 — Memberships</span>
+        <h2 id="mem-h">Pick how you train.</h2>
+        <p class="body-muted">Pricing is still being set. Founding members lock in their rate.</p>
+      </div>
+      <div class="tiers" id="tier-grid" tabindex="0" aria-label="Plans. Scroll sideways for more."></div>
+      <div class="scroll-dots" id="tier-dots" aria-hidden="true"></div>
+      <details class="compare">
+        <summary><span>Compare all plans</span><svg class="ic"><use href="#i-plus"/></svg></summary>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Plan comparison table">
+          <table id="compare-table"></table>
+        </div>
+      </details>
+    </section>
+
+    <!-- Founding + app -->
+    <section class="founding" aria-labelledby="found-h">
+      <div class="found-card">
+        <span class="num">07 — Founding members</span>
+        <h2 id="found-h">Get in before the doors open.</h2>
+        <ul class="perk-list" id="perks"></ul>
+        <a class="btn btn-solid" href="#join" data-interest="membership">Join the founding list</a>
+      </div>
+      <div class="app-band inv">
+        <div>
+          <span class="num">08 — The app</span>
+          <h2>Your key, your sessions, your plan.</h2>
+          <p>Hold to unlock the door. Book a session. Follow the program <span data-brand="coachFirst"></span> wrote for you. One app, same look as everything here.</p>
+          <a class="btn btn-light" href="#app">Try the member app</a>
+        </div>
+        <div class="mini-phone" aria-hidden="true">
+          <div class="mini-screen">
+            <span class="mini-label">Hold to unlock</span>
+            <span class="mini-ring"></span>
+            <span class="mini-label" data-brand="name"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="band" id="faq" aria-labelledby="faq-h">
+      <div class="two-col faq-cols">
+        <div class="band-head">
+          <span class="num">09 — Questions</span>
+          <h2 id="faq-h">Good questions.</h2>
+          <p class="body-muted">Something we didn't cover? Ask when you join the list. <span data-brand="coachFirst"></span> answers personally.</p>
+        </div>
+        <div class="faq" id="faq-list"></div>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section class="band band-surface" id="visit" aria-labelledby="visit-h">
+      <div class="band-head">
+        <span class="num">10 — Visit</span>
+        <h2 id="visit-h">In <span data-brand="locationShort"></span>.</h2>
+      </div>
+      <div class="visit">
+        <div class="map-slot" role="img" aria-label="Map placeholder: gym location in Lewiston, New York">
+          <svg class="ic ic-lg"><use href="#i-pin"/></svg>
+          <span>Map — address to be announced</span>
+        </div>
+        <dl class="visit-list">
+          <div><dt><svg class="ic"><use href="#i-pin"/></svg> Address</dt><dd id="v-address"></dd></div>
+          <div><dt><svg class="ic"><use href="#i-key"/></svg> Member hours</dt><dd id="v-members"></dd></div>
+          <div><dt><svg class="ic"><use href="#i-clock"/></svg> Staffed hours</dt><dd id="v-staffed"></dd></div>
+          <div><dt><svg class="ic"><use href="#i-insta"/></svg> Follow along</dt><dd id="v-social"></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Join -->
+    <section class="band join" id="join" aria-labelledby="join-h">
+      <div class="two-col">
+        <div class="band-head">
+          <span class="num">11 — Join the list</span>
+          <h2 id="join-h">Be first through the door.</h2>
+          <p class="big">Tell us what you're after. You'll hear from <span data-brand="coachFirst"></span> directly.</p>
+        </div>
+        <div class="form-card">
+          <form id="join-form" novalidate>
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="name" autocomplete="name" required aria-describedby="e-name">
+              <p class="field-err" id="e-name"></p>
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" required aria-describedby="e-email">
+              <p class="field-err" id="e-email"></p>
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone <span class="opt">optional</span></label>
+              <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel">
+            </div>
+            <fieldset class="field" aria-describedby="e-interest">
+              <legend>I'm interested in</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="checkbox" name="interest" value="membership"><span>Gym membership</span></label>
+                <label class="choice"><input type="checkbox" name="interest" value="training"><span>In-person training</span></label>
+                <label class="choice"><input type="checkbox" name="interest" value="remote"><span>Remote training</span></label>
+              </div>
+              <p class="field-err" id="e-interest"></p>
+            </fieldset>
+            <div class="field">
+              <label for="f-goal">What are you training for? <span class="opt">optional</span></label>
+              <textarea id="f-goal" name="goal" rows="3" placeholder="Get stronger, come back from an injury, prep for a season…"></textarea>
+            </div>
+            <button class="btn btn-solid btn-block" type="submit">Add me to the list</button>
+            <p class="fine">Concept only. Nothing you enter here is sent anywhere.</p>
+          </form>
+          <div class="form-done" id="join-done" hidden tabindex="-1">
+            <span class="done-mark"><svg class="ic"><use href="#i-check"/></svg></span>
+            <h3 id="done-h">You're on the list.</h3>
+            <p id="done-msg"></p>
+            <button class="btn btn-ghost" type="button" id="join-again">Add someone else</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-top">
+      <a class="wordmark foot-mark" href="#home" data-brand="name"></a>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#gym">The gym</a>
+        <a href="#training">Training</a>
+        <a href="#memberships">Memberships</a>
+        <a href="#faq">FAQ</a>
+        <a href="#app">Member app</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span data-brand="location"></span>
+      <span id="foot-contact"></span>
+      <span class="credit" data-brand="credit"></span>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky CTA -->
+  <div class="sticky-cta" id="sticky-cta" aria-hidden="true">
+    <a class="btn btn-solid btn-block" href="#join" tabindex="-1">Join the founding list</a>
+  </div>
+</div>
+
+<!-- ============================ MEMBER APP ============================ -->
+<div id="app" class="view" hidden>
+  <div class="app-stage">
+    <aside class="app-aside" id="demo-panel" aria-label="Demo controls">
+      <div class="aside-head">
+        <a class="back" href="#home"><svg class="ic"><use href="#i-back"/></svg> Back to site</a>
+        <button class="icon-btn demo-close" type="button" aria-label="Close demo controls" data-demo-close><svg class="ic"><use href="#i-close"/></svg></button>
+      </div>
+      <h2 class="aside-title">Member app <span class="tag">concept</span></h2>
+      <p class="aside-text">Everything here is simulated in your browser. No real door, calendar or payment is connected.</p>
+      <div class="demo-box">
+        <div class="demo-row">
+          <label for="demo-clock">Demo clock</label>
+          <output id="demo-clock-out" for="demo-clock"></output>
+        </div>
+        <input id="demo-clock" type="range" min="0" max="1425" step="15">
+        <div class="demo-quick">
+          <button type="button" data-clock="now">Now</button>
+          <button type="button" data-clock="420">7:00 am</button>
+          <button type="button" data-clock="840">2:00 pm</button>
+          <button type="button" data-clock="120">2:00 am</button>
+        </div>
+        <p class="hint">Change the time, then try the door. Switch plans on the Plan tab to see each access level.</p>
+      </div>
+      <div class="demo-actions">
+        <button class="btn btn-ghost btn-sm" type="button" data-brand-toggle><svg class="ic"><use href="#i-brush"/></svg> Brand</button>
+        <button class="btn btn-ghost btn-sm" type="button" id="reset-demo">Reset demo</button>
+      </div>
+    </aside>
+    <div class="scrim" id="demo-scrim" hidden data-demo-close></div>
+
+    <div class="phone" id="phone">
+      <header class="app-top">
+        <span class="wordmark" data-brand="shortName"></span>
+        <div class="app-top-r">
+          <button class="demo-chip" type="button" id="demo-open" aria-controls="demo-panel" aria-expanded="false">
+            <svg class="ic"><use href="#i-sliders"/></svg> Demo
+          </button>
+          <span class="app-time" id="app-time"></span>
+        </div>
+      </header>
+
+      <main class="app-main" id="app-main">
+        <!-- Key / Home -->
+        <section data-tab="key" class="tab" aria-labelledby="key-headline">
+          <p class="eyebrow" id="key-tier"></p>
+          <h1 id="key-headline"></h1>
+          <p class="key-sub" id="key-sub"></p>
+          <button id="unlock" class="unlock" type="button" aria-describedby="key-sub key-result">
+            <span class="unlock-ring"></span>
+            <span class="unlock-icon"><svg class="ic"><use href="#i-key"/></svg></span>
+            <span class="unlock-text">Hold to unlock</span>
+          </button>
+          <p class="key-result" id="key-result" role="status" aria-live="polite"></p>
+
+          <div class="cards">
+            <article class="card" id="next-card"></article>
+            <article class="card">
+              <div class="card-head"><h2 class="card-h">On the floor</h2><span class="badge" id="busy-label"></span></div>
+              <div class="meter" role="meter" aria-label="How busy the gym is" aria-valuemin="0" id="busy-meter"><span id="busy-fill"></span></div>
+              <p class="card-sub" id="busy-sub"></p>
+            </article>
+            <article class="card">
+              <div class="card-head"><h2 class="card-h">Recent entries</h2></div>
+              <ul class="log" id="entry-log"></ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- Book -->
+        <section data-tab="book" class="tab" hidden aria-labelledby="book-h">
+          <p class="eyebrow">Training</p>
+          <h1 id="book-h">Book a session</h1>
+          <p class="key-sub" id="book-sub"></p>
+          <div class="days" id="days" role="group" aria-label="Choose a day"></div>
+          <h2 class="small-h" id="slots-h"></h2>
+          <div class="slots" id="slots" role="group" aria-labelledby="slots-h"></div>
+          <h2 class="small-h">Your sessions</h2>
+          <ul class="bookings" id="bookings"></ul>
+        </section>
+
+        <!-- Program -->
+        <section data-tab="program" class="tab" hidden aria-labelledby="prog-h">
+          <p class="eyebrow" id="prog-eyebrow"></p>
+          <h1 id="prog-h">Your program</h1>
+          <div id="prog-body"></div>
+        </section>
+
+        <!-- Plan -->
+        <section data-tab="plan" class="tab" hidden aria-labelledby="plan-h">
+          <p class="eyebrow">Membership</p>
+          <h1 id="plan-h">Your plan</h1>
+          <p class="key-sub">Choose a plan to see what changes. In the real app this is a billing change; here it shows how access follows the plan.</p>
+          <div class="plan-list" id="plan-list" role="radiogroup" aria-label="Plans"></div>
+        </section>
+
+        <!-- Profile -->
+        <section data-tab="me" class="tab" hidden aria-labelledby="me-h">
+          <div class="me-head">
+            <span class="avatar" aria-hidden="true">DM</span>
+            <div>
+              <p class="eyebrow" id="me-since">Founding member</p>
+              <h1 id="me-h">Demo Member</h1>
+            </div>
+          </div>
+          <div class="stats" id="me-stats"></div>
+          <dl class="me-list">
+            <div><dt>Plan</dt><dd id="me-plan"></dd></div>
+            <div><dt>Door access</dt><dd id="me-access"></dd></div>
+            <div><dt>Coach</dt><dd data-brand="coachName"></dd></div>
+            <div><dt>Home gym</dt><dd data-brand="location"></dd></div>
+          </dl>
+          <h2 class="small-h">Notifications</h2>
+          <div class="toggles">
+            <label class="toggle"><span>Session reminders</span><input type="checkbox" role="switch" data-pref="remind" checked></label>
+            <label class="toggle"><span>Program updates from <span data-brand="coachFirst"></span></span><input type="checkbox" role="switch" data-pref="program" checked></label>
+            <label class="toggle"><span>Gym news</span><input type="checkbox" role="switch" data-pref="news"></label>
+          </div>
+          <a class="btn btn-ghost btn-block" href="#home">Back to the website</a>
+          <p class="hint center" data-brand="credit"></p>
+        </section>
+      </main>
+
+      <nav class="tabbar" aria-label="App">
+        <button type="button" data-go="key" aria-current="page"><svg class="ic"><use href="#i-key"/></svg><span>Key</span></button>
+        <button type="button" data-go="book"><svg class="ic"><use href="#i-cal"/></svg><span>Book</span></button>
+        <button type="button" data-go="program"><svg class="ic"><use href="#i-dumbbell"/></svg><span>Program</span></button>
+        <button type="button" data-go="plan"><svg class="ic"><use href="#i-card"/></svg><span>Plan</span></button>
+        <button type="button" data-go="me"><svg class="ic"><use href="#i-user"/></svg><span>Profile</span></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ SHARED UI ============================ -->
+<dialog class="sheet" id="confirm" aria-labelledby="confirm-h" aria-describedby="confirm-body">
+  <form method="dialog">
+    <span class="grabber" aria-hidden="true"></span>
+    <h2 id="confirm-h"></h2>
+    <div id="confirm-body" class="confirm-body"></div>
+    <div class="sheet-actions">
+      <button class="btn btn-ghost" value="cancel" type="submit" id="confirm-no">Cancel</button>
+      <button class="btn btn-solid" value="ok" type="submit" id="confirm-yes">Confirm</button>
+    </div>
+  </form>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden>
+  <span id="toast-msg"></span>
+  <button type="button" id="toast-undo" hidden>Undo</button>
+</div>
+
+<!-- Brand panel -->
+<aside id="brand-panel" class="brand-panel" hidden aria-labelledby="bp-h">
+  <div class="bp-head">
+    <h2 id="bp-h">Brand controls</h2>
+    <button class="icon-btn" type="button" aria-label="Close brand controls" data-brand-toggle><svg class="ic"><use href="#i-close"/></svg></button>
+  </div>
+  <p class="hint">Live preview only. To make a change permanent, edit <code>brand.js</code>.</p>
+  <label>Gym name <input id="bp-name"></label>
+  <label>Short name <input id="bp-short"></label>
+  <label>Tagline <input id="bp-tagline"></label>
+  <label>Theme <select id="bp-theme"></select></label>
+  <label>Accent <input id="bp-accent" type="color"></label>
+  <label>Display font <select id="bp-display"></select></label>
+  <label>Body font <select id="bp-body"></select></label>
+  <div class="bp-actions">
+    <button type="button" class="btn btn-ghost btn-sm" id="bp-reset">Reset</button>
+    <button type="button" class="btn btn-solid btn-sm" id="bp-copy">Copy settings</button>
+  </div>
+  <p class="hint" id="bp-msg" role="status" aria-live="polite"></p>
+</aside>
+
+<script src="brand.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
