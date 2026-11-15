@@ -20,6 +20,16 @@ Opening `index.html` directly works. To test on a phone on the same network, ser
 python3 -m http.server 8411
 ```
 
+## Deploy (Netlify)
+
+There's no build step. `netlify.toml` tells Netlify to publish the repo root as-is.
+
+1. In Netlify, choose **Add new site → Import an existing project → GitHub** and pick `mlewallen/vmuto-concept`.
+2. Leave **Build command** empty and **Publish directory** as `.`. `netlify.toml` sets both, so the UI fields can stay blank.
+3. Set the branch to deploy (`main` for production). Every push to that branch redeploys, and pull requests get preview URLs.
+
+The config also adds basic security headers and an `X-Robots-Tag: noindex` header, so the concept stays out of search results.
+
 ## Routes
 
 - `#home`, `#gym`, `#training`, `#memberships`, `#faq`, `#visit`, `#join` are site sections.
