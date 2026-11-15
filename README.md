@@ -30,6 +30,18 @@ There's no build step. `netlify.toml` tells Netlify to publish the repo root as-
 
 The config also adds basic security headers and an `X-Robots-Tag: noindex` header, so the concept stays out of search results.
 
+### Netlify badge
+
+Netlify injects a "Powered by Netlify" badge into deployed pages. An inline `<style>` in the `<head>` of `index.html` hides it:
+
+```html
+<style>
+  iframe#nl-badge-frame, #nl-badge { display: none !important; }
+</style>
+```
+
+The badge button sits inside an iframe (`#nl-badge-frame`), so CSS aimed at the button alone can't reach it, and the rule hides the iframe instead. `!important` overrides the iframe's inline style. If the badge ever comes back, Netlify has changed its markup. Inspect the live page for a fixed element in the bottom-right corner with a very high `z-index`, and update the selector.
+
 ## Routes
 
 - `#home`, `#gym`, `#training`, `#memberships`, `#faq`, `#visit`, `#join` are site sections.
